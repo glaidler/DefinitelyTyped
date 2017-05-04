@@ -30,6 +30,8 @@ declare global { namespace L {
         interface Icon extends Leaflet.Icon {
             options: AwesomeMarkers.IconOptions;
         }
+                     
+        type MarkerColor = 'red' | 'darkred' | 'orange' | 'green' | 'darkgreen' | 'blue' | 'purple' | 'darkpurple' | 'cadetblue' | 'white' | 'lightred' | 'beige' | 'lightgreen' | 'darkblue' | 'lightblue' | 'pink' | 'gray' | 'lightgray' | 'black';
 
         interface IconOptions extends Leaflet.IconOptions {
             /**
@@ -40,12 +42,12 @@ declare global { namespace L {
             /**
             * Select de icon library. 'fa' for font-awesome or 'glyphicon' for bootstrap 3.
             */
-            prefix?: 'fa' | 'glyphicon';
+            prefix?: '' | 'fa' | 'glyphicon';
 
             /**
             * Color of the marker
             */
-            markerColor?: 'red' | 'darkred' | 'orange' | 'green' | 'darkgreen' | 'blue' | 'purple' | 'darkpurple' | 'cadetblue';
+            markerColor?: MarkerColor;
 
             /**
             * Color of the icon. 'white', 'black' or css code (hex, rgba etc).
